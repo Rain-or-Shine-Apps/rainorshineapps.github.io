@@ -15,16 +15,16 @@
     .app-card { background: white; border-radius: 20px; padding: 28px; border: 1px solid #e2e8f0; display: flex; align-items: flex-start; gap: 20px; }
     .app-icon { width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; flex-shrink: 0; }
     .app-icon.decidr { background: #4f46e5; }
+    .app-icon.creative-juices { background: linear-gradient(135deg, #FF6B35, #9C27B0); }
     .app-info { flex: 1; }
     .app-name { font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
     .app-tagline { font-size: 14px; color: #64748b; margin-bottom: 12px; line-height: 1.5; }
     .app-links { display: flex; gap: 12px; flex-wrap: wrap; }
     .app-links a { font-size: 13px; color: #4f46e5; font-weight: 500; text-decoration: none; }
     .app-links a:hover { text-decoration: underline; }
+    .app-links a.cj { color: #FF6B35; }
     .badge { display: inline-block; background: #eff6ff; color: #4f46e5; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 12px; }
-    .coming-soon { background: #f8fafc; border: 2px dashed #e2e8f0; }
-    .coming-soon .app-name { color: #94a3b8; }
-    .coming-soon .badge { background: #f1f5f9; color: #94a3b8; }
+    .badge.cj { background: #fff3ee; color: #FF6B35; }
     .about { background: white; border-radius: 20px; padding: 28px; border: 1px solid #e2e8f0; margin-top: 24px; }
     .about h2 { font-size: 18px; font-weight: 600; margin-bottom: 12px; }
     .about p { color: #64748b; line-height: 1.6; font-size: 14px; }
@@ -36,7 +36,7 @@
 <body>
   <div class="header">
     <h1>☀️ Rain or Shine Apps</h1>
-    <p>Simple, thoughtful apps for everyday decisions</p>
+    <p>Simple, thoughtful apps for everyday life</p>
   </div>
 
   <div class="container">
@@ -58,13 +58,19 @@
         </div>
       </div>
 
-      <!-- Creative Juices placeholder -->
-      <div class="app-card coming-soon">
-        <div class="app-icon" style="background: #f1f5f9; font-size: 32px;">🎨</div>
+      <!-- Creative Juices -->
+      <div class="app-card">
+        <div class="app-icon creative-juices">🍹</div>
         <div class="app-info">
-          <div class="badge">Coming Soon</div>
+          <div class="badge cj">Available on iOS & Android</div>
           <div class="app-name">Creative Juices</div>
-          <div class="app-tagline">More details coming soon.</div>
+          <div class="app-tagline">Blend ideas. Get inspired. Make something. Throw words into the blender, hit blend, and get an AI-crafted creative prompt for your next song, artwork, or story.</div>
+          <div class="app-links">
+            <a href="creative-juices/index.html" class="cj">Learn more</a>
+            <a href="creative-juices/support.html" class="cj">Support</a>
+            <a href="creative-juices/privacy.html" class="cj">Privacy Policy</a>
+            <a href="creative-juices/terms.html" class="cj">Terms</a>
+          </div>
         </div>
       </div>
 
@@ -72,11 +78,11 @@
 
     <div class="about">
       <h2>About Rain or Shine Apps</h2>
-      <p>We build simple, focused apps that help people think more clearly and make better decisions. Based in the UK, we're a small independent developer passionate about thoughtful software.</p>
+      <p>We build simple, focused apps that help people think more clearly and live more creatively. Based in the UK, we're a small independent developer passionate about thoughtful software.</p>
     </div>
 
     <div class="contact">
-      <p>Questions? Get in touch at <a href="mailto:rain.or.shine.apps@gmail.com">rain.or.shine.apps@gmail.com</a></p>
+      <p>Questions? Get in touch at <a href="mailto:support@rainorshineapps.com">support@rainorshineapps.com</a></p>
     </div>
   </div>
 
