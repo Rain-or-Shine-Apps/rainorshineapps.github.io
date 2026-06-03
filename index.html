@@ -6,7 +6,7 @@
   <title>Rain or Shine Apps</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5e2c8; color: #2d1a0e; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #ffffff; color: #1e293b; }
 
     .banner { width: 100%; display: block; }
 
@@ -14,10 +14,10 @@
     .apps { display: flex; flex-direction: column; gap: 24px; }
 
     .app-card {
-      background: #fffdf9;
+      background: #ffffff;
       border-radius: 20px;
       padding: 28px;
-      border: 1px solid #e8d5c0;
+      border: 1px solid #e2e8f0;
       display: flex;
       align-items: flex-start;
       gap: 20px;
@@ -33,8 +33,8 @@
     }
 
     .app-info { flex: 1; }
-    .app-name { font-size: 20px; font-weight: 700; color: #2d1a0e; margin-bottom: 4px; }
-    .app-tagline { font-size: 14px; color: #7a5c3e; margin-bottom: 12px; line-height: 1.6; }
+    .app-name { font-size: 20px; font-weight: 700; color: #1e293b; margin-bottom: 4px; }
+    .app-tagline { font-size: 14px; color: #64748b; margin-bottom: 12px; line-height: 1.6; }
     .app-links { display: flex; gap: 12px; flex-wrap: wrap; }
     .app-links a { font-size: 13px; font-weight: 500; text-decoration: none; }
     .app-links a:hover { text-decoration: underline; }
@@ -48,18 +48,35 @@
       margin-bottom: 12px;
     }
 
+    .store-buttons { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #111827;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 7px 14px 7px 10px;
+      border-radius: 9px;
+      line-height: 1.25;
+    }
+    .store-btn:hover { background: #374151; text-decoration: none; }
+    .store-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .store-btn span small { display: block; font-size: 9px; letter-spacing: 0.02em; opacity: 0.75; }
+    .store-btn span strong { display: block; font-size: 13px; font-weight: 700; }
+
     .about {
-      background: #fffdf9;
+      background: #ffffff;
       border-radius: 20px;
       padding: 28px;
-      border: 1px solid #e8d5c0;
+      border: 1px solid #e2e8f0;
       margin-top: 24px;
     }
-    .about h2 { font-size: 18px; font-weight: 600; color: #2d1a0e; margin-bottom: 12px; }
-    .about p { color: #7a5c3e; line-height: 1.6; font-size: 14px; }
+    .about h2 { font-size: 18px; font-weight: 600; color: #1e293b; margin-bottom: 12px; }
+    .about p { color: #64748b; line-height: 1.6; font-size: 14px; }
 
-    .contact { text-align: center; padding: 32px; color: #7a5c3e; font-size: 14px; }
-    .contact a { color: #a0522d; text-decoration: none; font-weight: 500; }
+    .contact { text-align: center; padding: 32px; color: #64748b; font-size: 14px; }
+    .contact a { color: #4f46e5; text-decoration: none; font-weight: 500; }
     .contact a:hover { text-decoration: underline; }
 
     .coming-soon-section { margin-top: 48px; }
@@ -69,25 +86,47 @@
       gap: 12px;
       margin-bottom: 20px;
     }
-    .coming-soon-heading h2 { font-size: 13px; font-weight: 700; color: #b0917a; letter-spacing: 0.08em; text-transform: uppercase; }
+    .coming-soon-heading h2 { font-size: 13px; font-weight: 700; color: #94a3b8; letter-spacing: 0.08em; text-transform: uppercase; }
     .coming-soon-heading::before,
-    .coming-soon-heading::after { content: ''; flex: 1; height: 1px; background: #e8d5c0; }
+    .coming-soon-heading::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
 
     .coming-soon-card {
-      background: #fffdf9;
+      background: #f8fafc;
       border-radius: 20px;
       padding: 28px;
-      border: 1px dashed #d4b896;
+      border: 1px dashed #cbd5e1;
       display: flex;
       align-items: flex-start;
       gap: 20px;
       opacity: 0.85;
     }
     .coming-soon-card .app-icon { filter: saturate(0.7); }
-    .coming-soon-card .app-name { color: #5a3e2b; }
-    .coming-soon-card .app-tagline { color: #9a7c62; }
+    .coming-soon-card .app-name { color: #475569; }
+    .coming-soon-card .app-tagline { color: #94a3b8; }
 
-    .footer { text-align: center; padding: 24px; color: #b0917a; font-size: 13px; border-top: 1px solid #e8d5c0; }
+    .footer { text-align: center; padding: 24px; color: #94a3b8; font-size: 13px; border-top: 1px solid #e2e8f0; }
+
+    .vote-wrap { margin-top: 12px; }
+    .vote-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: 1px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 5px 12px 5px 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #64748b;
+      cursor: pointer;
+      font-family: inherit;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .vote-btn:hover:not(.voted):not(:disabled) { border-color: #6366f1; color: #6366f1; background: #f0f1ff; }
+    .vote-btn.voted { border-color: #6366f1; color: #6366f1; background: #eef2ff; cursor: default; }
+    .vote-btn:disabled { opacity: 0.6; cursor: default; }
+    .vote-icon { width: 14px; height: 14px; flex-shrink: 0; }
+    .vote-count { font-size: 12px; font-weight: 700; }
   </style>
 </head>
 <body>
@@ -110,6 +149,16 @@
             <a href="decidr/privacy.html" style="color:#4f46e5;">Privacy Policy</a>
             <a href="decidr/terms.html" style="color:#4f46e5;">Terms</a>
           </div>
+          <div class="store-buttons">
+            <a href="https://apps.apple.com/gb/app/decidr-decision-aid/id6764582044" class="store-btn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <span><small>Download on the</small><strong>App Store</strong></span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.base69b1833772b25861b19afb36.app&hl=en-GB" class="store-btn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 8.5c.6.37.6 1.23 0 1.6l-14 8.5c-.66.5-1.6.03-1.6-.8z"/></svg>
+              <span><small>Get it on</small><strong>Google Play</strong></span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -125,6 +174,16 @@
             <a href="creative-juices/support.html" style="color:#FF6B35;">Support</a>
             <a href="creative-juices/privacy.html" style="color:#FF6B35;">Privacy Policy</a>
             <a href="creative-juices/terms.html" style="color:#FF6B35;">Terms</a>
+          </div>
+          <div class="store-buttons">
+            <a href="https://apps.apple.com/gb/app/creative-juices/id6766537635" class="store-btn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <span><small>Download on the</small><strong>App Store</strong></span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.rainorshineapps.creativejuices&hl=en-GB" class="store-btn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83.94-1.3 1.6-.8l14 8.5c.6.37.6 1.23 0 1.6l-14 8.5c-.66.5-1.6.03-1.6-.8z"/></svg>
+              <span><small>Get it on</small><strong>Google Play</strong></span>
+            </a>
           </div>
         </div>
       </div>
@@ -142,6 +201,13 @@
           <div class="badge" style="background:#f0fdf4; color:#16a34a;">Coming Soon</div>
           <div class="app-name">Brickify</div>
           <div class="app-tagline">Lock your selected apps behind a PIN and second factor. A digital detox tool that actually works — even when willpower runs out.</div>
+          <div class="vote-wrap" data-app="brickify">
+            <button class="vote-btn" onclick="castVote('brickify')">
+              <svg class="vote-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"/></svg>
+              <span class="vote-label">Vote up</span>
+              <span class="vote-count" id="count-brickify"></span>
+            </button>
+          </div>
         </div>
       </div>
     <!--Street Canvas-->
@@ -151,6 +217,13 @@
           <div class="badge" style="background:#f0fdf4; color:#16a34a;">Coming Soon</div>
           <div class="app-name">Street Canvas</div>
           <div class="app-tagline">Discover street art around the world. Every wall tells a story- go find it. Add art to the map. The underground snapped. Built by artists for artists.</div>
+          <div class="vote-wrap" data-app="street-canvas">
+            <button class="vote-btn" onclick="castVote('street-canvas')">
+              <svg class="vote-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"/></svg>
+              <span class="vote-label">Vote up</span>
+              <span class="vote-count" id="count-street-canvas"></span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -161,6 +234,13 @@
           <div class="badge" style="background:#f0fdf4; color:#16a34a;">Coming Soon</div>
           <div class="app-name">Big Sister</div>
           <div class="app-tagline">Keep your kids safe online. Big Sister gives parents the tools to monitor, guide, and protect their children's digital world — without the arguments.</div>
+          <div class="vote-wrap" data-app="big-sister">
+            <button class="vote-btn" onclick="castVote('big-sister')">
+              <svg class="vote-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"/></svg>
+              <span class="vote-label">Vote up</span>
+              <span class="vote-count" id="count-big-sister"></span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -171,6 +251,13 @@
           <div class="badge" style="background:#f0fdf4; color:#16a34a;">Coming Soon</div>
           <div class="app-name">Pocket Muney</div>
           <div class="app-tagline">Teach kids the value of money in a way that actually sticks. Set chores, give rewards, and watch good habits grow — all in one place.</div>
+          <div class="vote-wrap" data-app="pocket-muney">
+            <button class="vote-btn" onclick="castVote('pocket-muney')">
+              <svg class="vote-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd"/></svg>
+              <span class="vote-label">Vote up</span>
+              <span class="vote-count" id="count-pocket-muney"></span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -186,6 +273,58 @@
   </div>
 
   <div class="footer">© 2026 Rain or Shine Apps. All rights reserved.</div>
+
+  <script>
+    const VOTE_NS = 'rainorshineapps';
+    const VOTE_KEYS = {
+      'brickify':     'brickify-v1',
+      'street-canvas':'street-canvas-v1',
+      'big-sister':   'big-sister-v1',
+      'pocket-muney': 'pocket-muney-v1'
+    };
+
+    async function loadVoteCounts() {
+      for (const [app, key] of Object.entries(VOTE_KEYS)) {
+        const el = document.getElementById('count-' + app);
+        if (!el) continue;
+        try {
+          const r = await fetch('https://api.countapi.xyz/get/' + VOTE_NS + '/' + key);
+          if (!r.ok) continue;
+          const { value } = await r.json();
+          if (value > 0) el.textContent = value;
+        } catch {}
+      }
+    }
+
+    async function castVote(app) {
+      if (localStorage.getItem('voted-' + app)) return;
+      const btn = document.querySelector('[data-app="' + app + '"] .vote-btn');
+      const countEl = document.getElementById('count-' + app);
+      if (btn) btn.disabled = true;
+      try {
+        const r = await fetch('https://api.countapi.xyz/hit/' + VOTE_NS + '/' + VOTE_KEYS[app]);
+        const { value } = await r.json();
+        localStorage.setItem('voted-' + app, '1');
+        if (btn) { btn.classList.add('voted'); btn.querySelector('.vote-label').textContent = 'Voted!'; }
+        if (countEl && value > 0) countEl.textContent = value;
+      } catch {
+        localStorage.setItem('voted-' + app, '1');
+        if (btn) { btn.classList.add('voted'); btn.querySelector('.vote-label').textContent = 'Voted!'; }
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      for (const app of Object.keys(VOTE_KEYS)) {
+        if (localStorage.getItem('voted-' + app)) {
+          const btn = document.querySelector('[data-app="' + app + '"] .vote-btn');
+          if (btn) { btn.classList.add('voted'); btn.querySelector('.vote-label').textContent = 'Voted!'; }
+        }
+      }
+      loadVoteCounts();
+    });
+  </script>
 
 </body>
 </html>
